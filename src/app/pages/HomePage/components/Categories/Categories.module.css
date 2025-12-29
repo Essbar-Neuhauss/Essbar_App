@@ -1,0 +1,54 @@
+.section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: clamp(0.5rem, 3vw, 1rem);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: clamp(0.75rem, 2vw, 1.25rem);
+    width: min(960px, 100%);
+    align-items: end;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #1b1b1b;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff7e8 0%, #f2d8a9 50%, #e8b76f 100%);
+    border: 3px solid #1b1b1b;
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #1b1b1b;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.avatarText {
+    letter-spacing: 0.05em;
+}
+
+.label {
+    font-weight: 800;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.2;
+}
+
+@media (max-width: 640px) {
+    .avatar {
+        width: 76px;
+        height: 76px;
+        font-size: 0.95rem;
+    }
+}
